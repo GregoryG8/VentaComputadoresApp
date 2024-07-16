@@ -6,10 +6,10 @@ public class Computador {
     private Monitor monitor;
     private Teclado teclado;
     private Raton raton;
-    private static int contadorComputadores;
+    private static int contadorComputadores = 0;
 
     private Computador() {
-        idComputador = contadorComputadores++;
+        idComputador = ++contadorComputadores;
     }
 
     public Computador(String nombre, Monitor monitor, Teclado teclado, Raton raton) {
@@ -26,9 +26,9 @@ public class Computador {
         return "Computador{" +
                 "idComputador=" + idComputador +
                 ", nombre='" + nombre + '\'' +
-                "\n monitor=" + monitor +
-                "\n teclado=" + teclado +
-                "\n raton=" + raton +
+                "   \n monitor=" + monitor +
+                "   \n teclado=" + teclado +
+                "   \n raton=" + raton +
                 '}';
     }
 }

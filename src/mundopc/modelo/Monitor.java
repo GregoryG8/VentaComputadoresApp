@@ -4,10 +4,10 @@ public class Monitor {
     private final int idMonitor;
     private String marca;
     private double tamano;
-    private static int contadorMonitores;
+    private static int contadorMonitores = 0;
 
     private Monitor() {
-        idMonitor = contadorMonitores++;
+        idMonitor = ++contadorMonitores;
     }
 
     public Monitor(String marca, double tamano) {

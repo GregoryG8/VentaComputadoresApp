@@ -12,7 +12,7 @@ public class Orden {
 
     public Orden(){
         computadores = new ArrayList<>();
-        this.idOrden = ++contadorOrdenes;
+        this.idOrden = contadorOrdenes++;
     }
 
     public void agregarComputador(Computador computador){
@@ -22,7 +22,6 @@ public class Orden {
     public void mostrarOrden(){
         System.out.println("Orden #" + idOrden);
         System.out.println("Total computadores: " + computadores.size());
-        System.out.println();
         computadores.forEach(System.out::println);
     }
 
